@@ -29,7 +29,18 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
-        
+        spc_tab: space_tab {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>
+            bindings = <SPACE>, <TAB>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };     
+        bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <BACKSPACE>, <DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     conditional_layers {
@@ -54,7 +65,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
           &lt BUTTON Z  &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                        &lt NAV SPACE &lt MEDIA ESC &lt SYM ENTER &lt NUM BSPC
+                                       &lt NAV &space_tab &lt MEDIA ESC &lt SYM ENTER &lt NUM &bspc_del
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -123,7 +134,7 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp F10     &kp F1     &kp F2     &kp F3 &kp PAUSE_BREAK    &none      &none      &none      &none      &none    
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp SPACE &kp K_APP        &none      &none        
+                                    &lt NAV &space_tab &kp K_APP        &none      &none        
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯                                 
           >;
         };
