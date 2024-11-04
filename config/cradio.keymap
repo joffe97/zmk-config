@@ -53,7 +53,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
           &lt BUTTON Z  &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                        &lt NAV ESC &lt MEDIA SPACE &lt SYM ENTER &lt NUM BSPC
+                                        &lt NAV SPACE &lt MEDIA ESC &lt SYM ENTER &lt NUM BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
