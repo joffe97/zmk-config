@@ -29,6 +29,7 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+        
     };
 
     conditional_layers {
@@ -82,12 +83,12 @@
             &kp LBKT    &kp N7     &kp N8     &kp N9    &kp RBKT        &none      &none      &none      &none      &none     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &kp SEMI    &kp N4     &kp N5     &kp N6    &kp EQUAL       &none      &none      &none      &none      &none     
+            &kp SEMI    &kp N4     &kp N5     &kp N6    &kp EQUAL       &none  &kp KC_SHIFT &kp KC_CTRL &kp KC_ALT &kp KC_GUI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp GRAVE   &kp N1     &kp N2     &kp N3    &kp BSLH        &none      &none      &none      &none      &none     
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &kp N0    &kp MINUS   &lt FUN SPACE  &none        
+                                              &kp N0    &kp MINUS      &mo SYM     &none        
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
              >;
@@ -100,12 +101,12 @@
             &kp LBRC   &kp AMPS   &kp STAR   &kp LPAR   &kp RBRC        &none      &none      &none      &none      &none    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &kp COLON  &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS        &none      &none      &none      &none      &none    
+            &kp COLON  &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS        &none  &kp KC_SHIFT &kp KC_CTRL &kp KC_ALT &kp KC_GUI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp TILDE  &kp EXCL    &kp AT    &kp HASH   &kp PIPE        &none      &none      &none      &none      &none    
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &kp RPAR   &kp UNDER       &none   &lt FUN BSPC        
+                                             &kp RPAR   &kp UNDER       &none     &mo NUM        
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯                                 
           >;
         };
@@ -117,12 +118,12 @@
             &kp F12     &kp F7     &kp F8     &kp F9   &kp PSCRN        &none      &none      &none      &none      &none    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &kp F11     &kp F4     &kp F5     &kp F6   &kp SLCK         &none      &none      &none      &none      &none    
+            &kp F11     &kp F4     &kp F5     &kp F6   &kp SLCK         &none  &kp KC_SHIFT &kp KC_CTRL &kp KC_ALT &kp KC_GUI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp F10     &kp F1     &kp F2     &kp F3 &kp PAUSE_BREAK    &none      &none      &none      &none      &none    
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &kp K_APP  &kp SPACE        &none      &none        
+                                             &kp SPACE &kp K_APP        &none      &none        
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯                                 
           >;
         };
@@ -134,7 +135,7 @@
              &none      &none      &none      &none      &none       &key_repeat &kp K_PASTE &kp K_COPY &kp K_CUT  &kp K_UNDO
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-             &none      &none      &none      &none      &none        &caps_word  &kp LEFT   &kp DOWN    &kp UP   &kp RIGHT 
+         &kp KC_GUI &kp KC_ALT &kp KC_CTRL &kp KC_SHIFT  &none        &caps_word  &kp LEFT   &kp DOWN    &kp UP   &kp RIGHT 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
              &none      &none      &none      &none      &none          &kp INS   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
@@ -151,7 +152,7 @@
              &none      &none      &none      &none      &none          &none      &none      &none      &none      &none    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-             &none      &none      &none      &none      &none          &none  &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
+        &kp KC_GUI &kp KC_ALT &kp KC_CTRL &kp KC_SHIFT   &none          &none  &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
              &none      &none      &none      &none      &none          &none      &none      &none      &none      &none              
