@@ -11,7 +11,7 @@
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LGUI  k1  &ht LALT  k2  &ht LCTRL k3  &ht LSHFT k4
-#define HRMR(k1,k2,k3,k4) &ht LSHFT k1  &ht LCTRL k2  &ht LALT  k3  &ht LGUI  k4
+#define HRMR(k1,k2,k3,k4) &ht RSHFT k1  &ht LCTRL k2  &ht LALT  k3  &ht LGUI  k4
 #define HRML_R3(k2,k3,k4) &ht LALT  k2  &ht LCTRL k3  &ht LSHFT k4
 
 #define BASE   0
@@ -38,7 +38,7 @@
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&lt NAV SPACE>, <&lt NAV TAB>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_RSFT)>;
         };     
         lt_nav_spc_tab_ctrl: lt_nav_space_tab_ctrl {
             compatible = "zmk,behavior-mod-morph";
@@ -92,7 +92,7 @@
             &gui_a_aa HRML_R3(S,      D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SQT)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-          &lt BUTTON Z  &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+          &lt BUTTON Z &ht RALT X  &kp C      &kp V      &kp B          &kp N      &kp M    &kp COMMA &ht RALT DOT &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                  &lt_nav_spc_tab_ctrl &lt MEDIA ESC &lt SYM ENTER &lt_num_bspc_del
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -123,7 +123,7 @@
             &kp LBKT    &kp N7     &kp N8     &kp N9    &kp RBKT        &none      &none      &none      &none      &none     
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &kp SEMI    &kp N4     &kp N5     &kp N6    &kp EQUAL       &none    &kp LSHIFT  &kp LCTRL  &kp LALT   &kp LGUI
+            &kp SEMI    &kp N4     &kp N5     &kp N6    &kp EQUAL       &none    &kp RSHIFT  &kp LCTRL  &kp LALT   &kp LGUI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp GRAVE   &kp N1     &kp N2     &kp N3    &kp BSLH        &none      &none      &none      &none      &none     
@@ -140,7 +140,7 @@
             &kp LBRC   &kp AMPS   &kp STAR   &kp LPAR   &kp RBRC        &none      &none      &none      &none      &none    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &kp COLON  &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS        &none    &kp LSHIFT  &kp LCTRL  &kp LALT   &kp LGUI
+            &kp COLON  &kp DLLR   &kp PRCNT  &kp CARET  &kp PLUS        &none    &kp RSHIFT  &kp LCTRL  &kp LALT   &kp LGUI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp TILDE  &kp EXCL    &kp AT    &kp HASH   &kp PIPE        &none      &none      &none      &none      &none    
@@ -157,7 +157,7 @@
             &kp F12     &kp F7     &kp F8     &kp F9   &kp PSCRN        &none      &none      &none      &none      &none    
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &kp F11     &kp F4     &kp F5     &kp F6   &kp SLCK         &none    &kp LSHIFT  &kp LCTRL  &kp LALT   &kp LGUI
+            &kp F11     &kp F4     &kp F5     &kp F6   &kp SLCK         &none    &kp RSHIFT  &kp LCTRL  &kp LALT   &kp LGUI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp F10     &kp F1     &kp F2     &kp F3 &kp PAUSE_BREAK    &none      &none      &none      &none      &none    
