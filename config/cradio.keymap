@@ -43,8 +43,8 @@
         lt_nav_spc_tab_ctrl: lt_nav_space_tab_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&lt_nav_space_tab>, <&lt NAV LS(LC(SPACE))>;
-            mods = <(MOD_LCTRL|MOD_RCTRL)>;
+            bindings = <&lt_nav_spc_tab>, <&lt NAV LS(LC(SPACE))>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
         };     
         lt_num_bspc_del: lt_num_backspace_delete {
             compatible = "zmk,behavior-mod-morph";
